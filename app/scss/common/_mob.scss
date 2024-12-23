@@ -1,0 +1,120 @@
+.mob {
+  display: flex;
+  position: fixed;
+  height: calc(100vh - 104px);
+  top: 104px;
+  z-index: 200;
+  background-color: #141414;
+  width: 100%;
+  transition-duration: .4s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50px);
+  overflow: auto;
+  @media (max-width: 759px) {
+    height: calc(100vh - 56px);
+    top: 56px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &__cont {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 64px;
+    width: 100%;
+    @media (max-width: 759px) {
+      padding: 32px 16px;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: #fff;
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      @media (max-width: 759px) {
+        padding: 20px 0;
+      }
+      svg {
+        margin-left: 5px;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid #FFFFFF;
+      }
+    }
+  }
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #FFFFFF;
+    width: 100%;
+    @media (max-width: 759px) {
+      padding-bottom: 20px;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      &-title {
+        color: #fff;
+        margin-right: 5px;
+      }
+      svg {
+        transform: rotateX(180deg);
+        transition-duration: .4s;
+      }
+    }
+    &-links {
+      padding: 50px 0 0 64px;
+      display: none;
+      @media (max-width: 759px) {
+        padding-top: 20px;
+      }
+      a {
+        color: #fff;
+        display: block;
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+    &.active {
+      .mob__tab-top {
+        svg {
+          transform: rotateX(0);
+        }
+      }
+    }
+  }
+  &__bot {
+    margin-top: auto;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    @media (max-width: 759px) {
+      display: flex;
+    }
+  }
+  &-num {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 150%;
+    /* identical to box height, or 20px */
+
+
+    /* White */
+
+    color: #FFFFFF;
+    margin-right: 16px;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

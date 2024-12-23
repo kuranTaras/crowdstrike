@@ -1,0 +1,131 @@
+.leader {
+  display: flex;
+  height: 100vh;
+  @media (max-width: 999px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  &__left {
+    width: 61.197916666%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    @media (max-width: 1899px) {
+      width: 60.125%;
+    }
+    @media (max-width: 1249px) {
+      width: 50%;
+    }
+    @media (max-width: 999px) {
+      width: 100%;
+      padding: 100px 32px;
+    }
+    @media (max-width: 759px) {
+      padding: 72px 16px;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 560px;
+      width: 100%;
+      margin-left: 200px;
+      align-items: flex-start;
+      @media (max-width: 1899px) {
+        margin-left: 120px;
+      }
+      @media (max-width: 1399px) {
+        margin-left: 80px;
+      }
+      @media (max-width: 999px) {
+        margin-left: 0;
+      }
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+  &__right {
+    width: 38.802083333%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #FD0001;
+    @media (max-width: 1899px) {
+      width: 39.875%
+    }
+    @media (max-width: 1249px) {
+      width: 50%;
+    }
+    @media (max-width: 999px) {
+      width: 100%;
+      padding: 80px 32px;
+    }
+    @media (max-width: 759px) {
+      padding: 72px 16px;
+    }
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      @media (max-width: 759px) {
+        display: none;
+      }
+      &.leader-mob {
+        display: none;
+        @media (max-width: 759px) {
+          display: block;
+        }
+      }
+    }
+  }
+  &__items {
+    position: relative;
+    z-index: 2;
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 999px) {
+      max-width: 100%;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+      @media (max-width: 759px) {
+        margin-bottom: 24px;
+      }
+    }
+    &-title {
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      @media (max-width: 759px) {
+        margin-bottom: 8px;
+      }
+    }
+    &-p {
+      color: #FFFFFF;
+    }
+  }
+  &-title {
+    color: #fff;
+    span {
+      color: #FD0001;
+    }
+  }
+  &-p {
+    color: #FFFFFF;
+    margin: 40px 0;
+    @media (max-width: 759px) {
+      margin: 32px 0;
+    }
+  }
+}

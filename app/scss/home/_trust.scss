@@ -1,0 +1,97 @@
+.trust {
+  margin-top: 441px;
+  @media (max-width: 1899px) {
+    margin-top: 391px;
+  }
+  @media (max-width: 759px) {
+    margin-top: 311px;
+    padding-bottom: 72px;
+  }
+  &-title {
+    text-align: center;
+    margin-bottom: 80px;
+    @media (max-width: 759px) {
+      margin-bottom: 32px;
+    }
+  }
+  &__wrapper {
+    @media (max-width: 759px) {
+      overflow: auto;
+      padding-right: 16px;
+      margin-right: -16px;
+      margin-left: -16px;
+      padding-left: 16px;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__items {
+    width: 100%;
+    columns: 6;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    @media (max-width: 999px) {
+      columns: 3;
+    }
+    @media (max-width: 759px) {
+      columns: 6;
+      min-width: 984px;
+    }
+  }
+  &__item {
+   display: flex;
+    width: 190px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D9D9D9;
+    @media (max-width: 1249px) {
+      width: 156px;
+    }
+    @media (max-width: 999px) {
+      width: 241px;
+    }
+    @media (max-width: 759px) {
+      width: 168px;
+      min-width: 168px;
+    }
+    &:nth-child(6n - 5) {
+      height: 100px;
+    }
+    &:nth-child(6n - 4) {
+      height: 100px;
+    }
+    &:nth-child(6n - 3) {
+      height: 200px;
+    }
+    &:nth-child(6n - 2) {
+      height: 200px;
+    }
+    &:nth-child(6n - 1) {
+      height: 100px;
+    }
+    &:nth-child(6n) {
+      height: 100px;
+    }
+    &:first-child, &:nth-child(2),  &:nth-child(5),
+    &:nth-child(6), &:nth-child(8),  &:nth-child(9),
+    &:nth-child(10), &:nth-child(11), &:nth-child(13),
+    &:nth-child(14), &:nth-child(17), &:nth-child(18) {
+      @media (max-width: 999px) and (min-width: 760px) {
+        height: 100px;
+      }
+    }
+    &:nth-child(3),  &:nth-child(4),
+    &:nth-child(7), &:nth-child(12),  &:nth-child(15),
+    &:nth-child(16) {
+      @media (max-width: 999px) and (min-width: 760px) {
+        height: 200px;
+      }
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+}

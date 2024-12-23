@@ -1,0 +1,37 @@
+.use {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: 759px) {
+    padding: 72px 0;
+  }
+  &-title {
+    max-width: 800px;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    @media (max-width: 999px) {
+      max-width: 100%;
+    }
+  }
+  .btn-red-s {
+    margin: 56px auto 0 auto;
+    @media (max-width: 759px) {
+      margin-top: 32px;
+    }
+  }
+  &-p {
+    text-align: center;
+    color: #fff;
+    margin-top: 32px;
+    max-width: 482px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 999px) {
+      max-width: 100%;
+    }
+    @media (max-width: 759px) {
+      margin-top: 24px;
+    }
+  }
+}

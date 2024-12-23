@@ -1,0 +1,48 @@
+.world {
+  background-color: #F5F5F5;
+  @media (max-width: 759px) {
+    padding: 72px 0;
+  }
+  .container-s {
+    flex-direction: row;
+    @media (max-width: 999px) {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    display: flex;
+    width: 430px;
+    min-width: 430px;
+    margin-right: 130px;
+    @media (max-width: 1249px) {
+      width: 300px;
+      min-width: 300px;
+      margin-right: 50px;
+    }
+    @media (max-width: 999px) {
+      width: 430px;
+      height: 80px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 759px) {
+      width: 257px;
+      min-width: 257px;
+      height: 48px;
+      margin-bottom: 24px;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+  &-title {
+    margin-bottom: 40px;
+    @media (max-width: 759px) {
+      margin-bottom: 24px;
+    }
+  }
+}
